@@ -11,7 +11,7 @@ WriteFile::~WriteFile()
 {
 }
 
-void WriteFile::close(WriteFile* wf)
+void WriteFile::close()
 {
    if (closed)
    {
@@ -20,7 +20,7 @@ void WriteFile::close(WriteFile* wf)
    }
 }
 
-void WriteFile::writeLine(WriteFile* wf, String* line)
+void WriteFile::writeLine(String* line)
 {
    if (!closed && line->length() > 0)
    {

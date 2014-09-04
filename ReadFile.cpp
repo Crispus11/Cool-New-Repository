@@ -13,12 +13,12 @@ ReadFile::~ReadFile()
 {
 }
 
-bool ReadFile::eof(ReadFile* rf)
+bool ReadFile::eof()
 {
    return _eof;
 }
 
-void ReadFile::close(ReadFile* rf)
+void ReadFile::close()
 {
    if (!closed)
    {
@@ -27,7 +27,7 @@ void ReadFile::close(ReadFile* rf)
    }
 }
 
-String* ReadFile::readLine(ReadFile* rf)
+String* ReadFile::readLine()
 {
    if (closed) return NULL;
    if (_eof) return NULL;
