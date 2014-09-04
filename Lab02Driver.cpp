@@ -6,18 +6,20 @@
 #include <iostream>
 int main()
 {
-   ReadFile("cds.txt");
-   WriteFile("out.txt");
+   ReadFile* rf = new ReadFile("cds.txt");
+   WriteFile* wf = new WriteFile("out.txt");
 
-   while(!ReadFile::eof)
+   while(!rf->eof())
    {
-      String* line = ReadFile::readLine();
+      String* line = rf->readLine();
       wf->writeLine(line);
       delete line;
    }
 
-   ~ReadFile();
-   ~WriteFile();
+   rf->close();
+   wf->close();
+   delete rf;
+   delete wf;
 
    return 0;
 }
