@@ -11,7 +11,7 @@ class Random
       virtual ~Random();
       static Random* getRandom();
 
-      int getRandomInt(int lower, int upper);
+      int getRandomInt(int lower, int upper); //this is trivial
       float getRandomFloat(float lower, float upper);
 };
 
